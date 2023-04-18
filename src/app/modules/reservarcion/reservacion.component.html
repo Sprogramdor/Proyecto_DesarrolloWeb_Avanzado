@@ -1,0 +1,66 @@
+
+<div class="cuadro">
+    <div class="banner">
+        <img class="crop" src="../../../assets/img/reserva/zinema reserva.png" alt="">
+    </div>
+
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"><img src="../../../assets/img/hero/" alt=""></div>
+          <mat-card-title> {{loginService.username}}</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+          
+         <div>
+          <p>Seleccione la sala:</p>
+          <mat-form-field class="formulario" appearance="fill">
+            
+            <mat-select [(value)]="sala">
+
+              <mat-option value="1 Sala Común">1-Sala Común</mat-option>
+              <mat-option value="2 Sala Común">2-Sala Común</mat-option>
+              <mat-option value="3 Sala Común">3-Sala Común</mat-option>
+              <mat-option value="4 Sala VIP">4-Sala VIP</mat-option>
+              <mat-option value="5 Sala IMAX">5-Sala IMAX</mat-option>
+              <mat-option value="6 Sala Común">6-Sala Común</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <p>Seleccione la fecha</p>
+          <mat-card class="demo-inline-calendar-card">
+            <mat-calendar [(selected)]="date" minDate="2023-01-17"></mat-calendar>
+            
+          </mat-card>
+          <p>FECHA SELECCIONADA: {{formatDate(date)}}</p>
+        </div>
+        <div>
+          <p>Seleccione las horas de duracion:</p>
+          <mat-form-field class="formulario" appearance="fill">
+            
+            <mat-select [(value)]="horas">
+              <mat-option value="1 hora">1H</mat-option>
+              <mat-option value="2 horas">2H</mat-option>
+              <mat-option value="3 horas">3H</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>  
+        <div>
+          <p>Seleccione horario:</p>
+          <mat-form-field class="formulario" appearance="fill">
+            <mat-select  [(value)]="horario">
+              <mat-option value="Matutino">Matutino (8am-11am)</mat-option>
+              <mat-option value="Vespertino">Vespertino (2pm a 5pm)</mat-option>
+              <mat-option value="Nocturno">Nocturno (6pm a 9pm)</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>  
+        </mat-card-content>
+        <mat-card-actions>
+          <button  mat-raised-button color="primary" (click)="openDialog()">Reservar</button>
+          <button mat-raised-button color="accent" (click)="cancel()">Cancelar</button>
+        </mat-card-actions>
+      </mat-card>  
+  
+</div>

@@ -1,0 +1,65 @@
+<form [formGroup]="pagoNuevo" class="pago">
+    <div>
+        <h3>Información personal</h3>
+
+
+        <mat-form-field>
+            <mat-label>Nombres</mat-label>
+            <input type="text" matInput formControlName="nombres">
+            <mat-error *ngIf="">
+                El nombre es <strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <mat-label>Teléfono</mat-label>
+            <span matPrefix>+593 &nbsp;</span>
+            <input formControlName="numero" type="tel" matInput placeholder="0985586995">
+            <mat-error *ngIf="">
+                Teléfono es <strong>requerido</strong>
+            </mat-error>
+            <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="correo" matInput formControlName="correo" placeholder="Ex. ejemplo@correo.com">
+            <mat-error *ngIf="">
+                ingrese un email valido
+            </mat-error>
+            <mat-error *ngIf="">
+                Email es <strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <h3>Datos de la Tarjeta</h3>
+        <mat-form-field>
+            <mat-label>Número de Tarjeta</mat-label>
+            <input type="text" matInput formControlName="tarjeta" placeholder="5018 5020 5038">
+
+            <mat-error *ngIf="">
+                nombre usuario <strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Código de seguridad</mat-label>
+            <input type="password" matInput formControlName="codigo">
+            <mat-error *ngIf="">
+                código <strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Nombre de la Tarjeta</mat-label>
+            <input type="text" matInput formControlName="nombret">
+            <mat-error *ngIf="">
+                El nombre es <strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+
+</form>

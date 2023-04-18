@@ -1,0 +1,23 @@
+<h2>Formulario: PROMOCIONES</h2>
+<form class="example-form">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Poster</mat-label>
+                    <input matInput [(ngModel)]="poster" value="{{poster}}" name="poster">
+                </mat-form-field></td>
+        </tr>
+    </table>
+
+    <p>
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripcion</mat-label>
+            <textarea style="height: 10rem;" matInput [(ngModel)]="descripcion" name="descripcion" placeholder=" Descripcion de la pelicula" value="{{descripcion}}"></textarea>
+        </mat-form-field>
+    </p>
+
+    <div class="footer">
+        <button mat-raised-button color="primary" (click)="aceptar()"><mat-icon>save</mat-icon>Guardar</button>
+        <button mat-raised-button color="warn" (click)="cancelar()">Cancelar</button>
+    </div>
+</form>

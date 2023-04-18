@@ -1,0 +1,39 @@
+table {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+tr:nth-child(even) {
+  background-color: #263238;
+}
+tr:nth-child(even) td {
+  color: #fff;
+}
+.accion {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+mat-row,
+mat-header-row,
+mat-footer-row,
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+  border: 0;
+}
+
+th {
+  font-size: 1.5rem;
+}
+
+.regreso {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}

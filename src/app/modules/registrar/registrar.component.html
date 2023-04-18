@@ -1,0 +1,123 @@
+<section class="container">
+    <h2 style="margin-top: 3rem;">Registro</h2>
+    <hr>
+    <!-- <form class="example-form shadow" (ngSubmit)="agregar()" [formGroup]="usuarioRegistro"> -->
+    <form class="example-form shadow" (ngSubmit)="registrar()" [formGroup]="usuarioRegistro">
+        <fieldset class="fieldset">
+            <div class="divLegend">
+                <legend>Información personal</legend>
+            </div>
+
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Nombre</mat-label>
+                            <input type="text" matInput formControlName="nombres" placeholder="Ingresa tu nombre">
+                            <mat-error *ngIf="!usuarioRegistro.valid">
+                                El nombre es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Apellido</mat-label>
+                            <input type="text" matInput formControlName="apellido" placeholder="Ingresa tu apellido">
+                            <mat-error *ngIf="!usuarioRegistro.valid">
+                                El apellido es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field></td>
+                </tr>
+                <tr class="separador"></tr>
+                <tr>
+
+
+
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Cedula de identidad</mat-label>
+                            <input type="text" matInput formControlName="cedula" placeholder="09999999">
+                            <mat-error *ngIf="!usuarioRegistro.valid">
+                                La C.I es <strong>requerido</strong>
+                            </mat-error>
+                            <mat-icon matSuffix>perm_identity</mat-icon>
+                        </mat-form-field>
+
+                    </td>
+
+                </tr>
+                <tr class="separador"></tr>
+
+            </table>
+
+
+            <table class="example-full-width s-r" cellspacing="0">
+                <tr>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Ciudad</mat-label>
+                            <input type="text" matInput formControlName="ciudad" placeholder="Ingresa la ciudad">
+                            <mat-error *ngIf="!usuarioRegistro.valid">
+                                La ciudad es <strong>requerida</strong>
+                            </mat-error>
+                        </mat-form-field></td>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Dirección</mat-label>
+                            <input type="text" matInput formControlName="direccion" placeholder="Ingresa la dirección">
+
+                            <mat-error *ngIf="!usuarioRegistro.valid">
+                                La dirección es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr class="separador"></tr>
+            </table>
+
+            <div class="divLegend">
+                <legend>E-mail de acceso</legend>
+            </div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Ex. ejemplo@correo.com">
+                <mat-error *ngIf="!usuarioRegistro.valid">
+                    ingrese un email valido
+                </mat-error>
+                <mat-error *ngIf="!usuarioRegistro.valid">
+                    Email es <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombre de usuario</mat-label>
+                <input type="email" matInput formControlName="username" placeholder="Ingresa tu nombre de usuario">
+
+                <mat-error *ngIf="!usuarioRegistro.valid">
+                    nombre usuario <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+
+
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Contraseña</mat-label>
+                            <input type="password" matInput formControlName="password">
+                            <mat-error *ngIf="!usuarioRegistro.valid">
+                                contraseña <strong>requerida</strong>
+                            </mat-error>
+                        </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Repite la contraseña</mat-label>
+                            <input type="password" matInput formControlName="password">
+                            <mat-error *ngIf="!usuarioRegistro.valid">
+                                contraseña <strong>requerida</strong>
+
+                            </mat-error>
+                        </mat-form-field></td>
+
+                </tr>
+            </table>
+
+            <button mat-raised-button color="primary" type="submit">Registrar</button>
+
+        </fieldset>
+
+    </form>
+</section>

@@ -1,0 +1,15 @@
+mat-card-subtitle{
+    text-align: center;
+    background-color: red;
+    font-size: 24px;
+}
+mat-card{
+    align-content: center;
+}
+#medio{
+    margin-left: 180px;
+}
+#aceptar{
+    background-color: black;
+    color: aliceblue;
+  }

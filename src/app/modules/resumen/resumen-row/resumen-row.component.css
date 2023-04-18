@@ -1,0 +1,31 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+mat-icon {
+  margin-right: 10px;
+}
+.card-row {
+  width: 50rem;
+  margin: 0.5rem 1rem;
+}
+
+.font {
+  font-size: 8px;
+}
+
+.resume {
+  display: block;
+  background-color: rgb(255, 255, 255);
+}
+.resume2 {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .font {
+    font-size: 15px;
+  }
+}

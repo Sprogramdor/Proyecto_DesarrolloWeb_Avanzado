@@ -1,0 +1,47 @@
+<mat-toolbar color="primary" class="desktop">
+
+
+    <a href=""><img src="../../../assets/img/zinema.png" alt="Zinema-logo" height="90rem" /></a>
+
+    <a class="example-spacer" mat-button href="/cartelera">Cartelera</a>
+    <a class="example-spacer" mat-button href="/snack-bar">SnackBar</a>
+    <a class="example-spacer" mat-button href="/promociones">Promociones</a>
+
+    <button mat-raised-button (click)="openDialogSesion()" *ngIf="loginService.username.length === 0">Iniciar Sesion</button>
+
+    <button class="logg" mat-raised-button [matMenuTriggerFor]="menu" *ngIf="loginService.username.length != 0" id="user">
+        <mat-icon>account_circle</mat-icon> Bienvenido {{loginService.username}}</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="perfil()">Perfil</button>
+        <button mat-menu-item (click)="Salir()">Cerrar Sesion</button>
+    </mat-menu>
+</mat-toolbar>
+
+<mat-toolbar color="primary" class="mobile">
+
+    <div class="me">
+        <a href=""><img src="../../../assets/img/zinema.png" alt="Zinema-logo" height="90rem" /></a>
+        <button class="bttt" mat-raised-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+    </div>
+
+    <mat-drawer-container class="example-container" [hasBackdrop]="true">
+        <mat-drawer #drawer [mode]="mode.value">
+            <a mat-button href="/cartelera">Cartelera</a> <br>
+            <a mat-button href="/snack-bar">SnackBar</a> <br>
+            <a mat-button href="/promociones">Promociones</a> <br>
+            <button mat-raised-button (click)="openDialogSesion()" *ngIf="loginService.username.length==0">Iniciar Sesion</button>
+
+            <button class="logg" mat-raised-button [matMenuTriggerFor]="menu" *ngIf="loginService.username.length != 0 " id="user">
+                <mat-icon>account_circle</mat-icon> Bienvenido {{loginService.username}}</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="perfil()">Ver perfil</button>
+                <button mat-menu-item (click)="Salir()">Cerrar Sesion</button>
+            </mat-menu>
+        </mat-drawer>
+        <mat-drawer-content>
+            <mat-form-field appearance="fill" style="display:no; visibility: hidden;">
+                <mat-select #mode value="over"></mat-select>
+            </mat-form-field>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</mat-toolbar>

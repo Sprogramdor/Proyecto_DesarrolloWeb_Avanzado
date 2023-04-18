@@ -1,0 +1,13 @@
+.pagos {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .pagos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90rem;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+}

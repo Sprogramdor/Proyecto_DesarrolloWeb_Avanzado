@@ -1,0 +1,19 @@
+mat-card-subtitle{
+    text-align: center;
+    font-size: 24px;
+}
+mat-card{
+    align-content: center;
+}
+mat-card-title{
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 75px;
+}
+#medio{
+    margin-left: 200px;
+    background-color: black;
+    color: aliceblue;
+}

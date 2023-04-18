@@ -1,0 +1,18 @@
+.example-form {
+  min-width: 550px;
+  min-height: 300px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}

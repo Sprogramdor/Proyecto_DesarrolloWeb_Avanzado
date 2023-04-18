@@ -1,0 +1,75 @@
+<div class="resume">
+  <mat-grid-list cols="2" rowHeight="40">
+    <mat-grid-tile>
+      <h4><mat-icon>movie</mat-icon>PELÍCULA</h4>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font"> {{datos[0]}}</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h4><mat-icon>calendar_today</mat-icon>FECHA:</h4>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font"> {{datos[2]}}</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h4> <mat-icon> local_activity</mat-icon>TARIFA/ENTRADAS:</h4>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font"> {{datos[1]}}</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h4><mat-icon> local_offer</mat-icon>CANT. ENTRADAS:</h4>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font"> {{datos[3]}}</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h4><mat-icon>event_seat</mat-icon>SILLAS:</h4>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font"> {{datos[4]}}</label>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
+<br><br>
+<h4><mat-icon> fastfood</mat-icon>SNACKBAR</h4>
+<div class="resume2">
+  <mat-grid-list cols="3" rowHeight="18">
+    <mat-grid-tile>
+      <label class="font">Cantidad</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font">Producto</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font">Precio</label>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+  <mat-grid-list cols="3" rowHeight="40" *ngFor="let item of carrito.xmap| keyvalue">
+    <mat-grid-tile>
+      <label class="font">{{item.value}}x</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font">{{item.key.nombre.toString()}}</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font"> ${{item.key.precio}}</label>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="3" rowHeight="18">
+    <mat-grid-tile>
+      <label class="font" class="font">Total</label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font"></label>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <label class="font">{{total()}}</label>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

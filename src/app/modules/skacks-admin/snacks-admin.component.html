@@ -1,0 +1,63 @@
+<div class="regreso">
+    <a mat-raised-button href="/perfil" color="primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-left" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M20 15h-8v3.586a1 1 0 0 1 -1.707 .707l-6.586 -6.586a1 1 0 0 1 0 -1.414l6.586 -6.586a1 1 0 0 1 1.707 .707v3.586h8a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1z" />
+        </svg>
+        Regresar
+    </a>
+
+    <a mat-raised-button color="primary" (click)="editar()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="9" />
+            <line x1="9" y1="12" x2="15" y2="12" />
+            <line x1="12" y1="9" x2="12" y2="15" />
+        </svg>
+        Ingresar nuevo snack
+    </a>
+</div>
+<h1>Listado de SNACKS</h1>
+<table mat-table [dataSource]="snackBar" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="snacks_id">
+        <th mat-header-cell *matHeaderCellDef>Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.snacks_id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef>nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef>Descripcion </th>
+        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef>Precio </th>
+        <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element" class="accion">
+            <button mat-mini-fab color="warn" (click)="editar(element.snacks_id, element.image, element.nombre, element.descripcion, element.precio)"
+                aria-label="Example icon button with a filter list icon">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <div class="example-button-container">
+                <button mat-mini-fab color="warn" (click)="eliminar(element.snacks_id)" aria-label="Example icon button with a filter list icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

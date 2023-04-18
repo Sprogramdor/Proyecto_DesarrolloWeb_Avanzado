@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Reserva prevista para el dia <h2>{{ formatDate(data.date)}}</h2></h1>
+<div mat-dialog-content>
+<p>Horario : {{data.horario}}  </p>
+  <p>Sala: {{data.sala}}</p>
+  <p>Hora: {{data.horas}}</p>
+  <p>Para mas informacion acerca de la reserva se le notificara a traves de su correo electronico </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Listo</button>
+  
+</div>

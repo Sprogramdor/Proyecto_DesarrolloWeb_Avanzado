@@ -1,0 +1,92 @@
+mat-toolbar {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9;
+    height: 10rem;
+    padding-top: 1rem;
+    flex-direction: row;
+    padding: 1rem 9rem 0 9rem;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+a,
+.iniciar {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #ffee00;
+}
+
+.iniciar:hover {
+  background-color: #ffee00;
+}
+
+.logg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: fixed;
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+  }
+}
+
+.mat-drawer {
+  position: fixed;
+  width: 25rem;
+  height: 20rem;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+mat-drawer-content {
+  position: fixed;
+  width: auto;
+  height: auto;
+  top: 0rem;
+  padding: 0;
+  right: 2rem;
+}
+
+.me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem 5rem 0 5rem;
+  width: 30rem;
+}
+
+.bttt {
+  margin-left: 5rem;
+  background-color: #263238;
+  color: #fff;
+}

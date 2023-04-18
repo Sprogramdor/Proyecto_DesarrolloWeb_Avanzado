@@ -1,0 +1,27 @@
+<h4 style="display: flex; gap: 2rem; justify-content: center; align-items: center;
+margin: 2rem 0;"><mat-icon> credit_card</mat-icon>Metodo de Pago </h4>
+
+<div class="pagos">
+    <div *ngFor="let c of cards; let i=index;">
+        <mat-card class="shadow">
+            <div>
+                <mat-card-title>{{c.nombre}}</mat-card-title>
+                <small>{{c.descripcion}}</small>
+            </div>
+            <div>
+                <img src="{{c.img}}" alt="creditcard">
+
+                <mat-form-field [hidden]="true" style="margin: 0 1rem;">
+
+                    <input readonly min="0" autocomplete="off" matInput type="text">
+
+                    <mat-radio-group [name]="'op'">
+                        <mat-radio-button [name]="'op'" value="f"> Pagar </mat-radio-button>
+                    </mat-radio-group>
+
+                </mat-form-field>
+            </div>
+        </mat-card>
+    </div>
+</div>
+<br>

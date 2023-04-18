@@ -1,0 +1,36 @@
+.puesto {
+  width: auto;
+}
+@media (min-width: 1140px) {
+  mat-vertical-stepper {
+    width: 90rem;
+  }
+  .puesto {
+    width: 7.3rem;
+    margin: 0.5rem 0.5rem;
+  }
+  .teatro {
+    margin: 0 auto;
+    width: 75rem;
+  }
+}
+
+.caja {
+  overflow: auto;
+}
+
+.pantalla {
+  background-color: black;
+  color: #fff;
+  height: 5rem;
+  align-items: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.input {
+  display: none;
+}

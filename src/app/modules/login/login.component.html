@@ -1,0 +1,21 @@
+<div *ngIf="alert" class="alert-danger" role="alert" data-auto-dismiss>
+    <strong>Acceso incorrecto!</strong> Verificar el usuario y/o la contraseña.
+</div>
+<mat-card>
+    <form class="form" [formGroup]="usuarioLogin" (ngSubmit)="onSubmit()">
+        <mat-icon>account_circle</mat-icon>
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Ingrese su nombre de usuario" formControlName="username">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input type="password" matInput placeholder="Ingrese su password" formControlName="password">
+        </mat-form-field>
+
+        <button class="btn-login" mat-raised-button color="primary" [disabled]="!usuarioLogin.valid">Aceptar</button>
+
+        <small style="margin-top: 2rem;">
+            <a href="/registrar"> ¿Nuevo? Registrate aquí</a>
+        </small>
+    </form>
+</mat-card>

@@ -1,0 +1,28 @@
+.promociones {
+  display: block;
+}
+@media (min-width: 768px) {
+  .promocion {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.ver__link {
+  width: 50%;
+  padding: 1rem 0;
+}
+
+.ver__link:hover {
+  background-color: #ffee00;
+  color: #000;
+}
+.fondo img {
+  width: 50rem;
+}
+
+.ver {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 4rem 0;
+}

@@ -1,0 +1,32 @@
+<h2>Compras</h2>
+<main class="container">
+    <hr>
+    <div class="compra">
+
+        <div class="pelicula_info shadow">
+            <div class="mat-card-img">
+                <img class="img" src="../../../../../assets/img/peliculas/{{infopeli.poster}}" alt="{{infopeli.titulo_original}}">
+            </div>
+            <br>
+            <h3>Título Original</h3>
+
+            <p>{{infopeli.titulo_original}}</p>
+            <mat-divider></mat-divider>
+            <h3>Reparto</h3>
+            <p>{{infopeli.reparto}}</p>
+            <mat-divider></mat-divider>
+
+            <h3>Sipnopsis</h3>
+            <p>{{infopeli.sinopsis}}</p>
+            <mat-divider></mat-divider>
+            <h3>Clasificación</h3>
+            <p>{{infopeli.id_clasificacion}}</p>
+            <mat-divider></mat-divider>
+            <h3>Precio</h3>
+            <p class="precio">${{infopeli.precio}}.00</p>
+        </div>
+
+        <app-stepper [movie]="infopeli"> </app-stepper>
+
+    </div>
+</main>

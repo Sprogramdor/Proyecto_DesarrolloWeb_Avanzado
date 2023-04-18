@@ -1,0 +1,165 @@
+<mat-vertical-stepper [linear]="false" #stepper>
+  <!-- [linear]="true" -->
+
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Selecciona una fecha y el horario</ng-template>
+      <h3>Horarios</h3>
+      <mat-form-field class="input">
+        <input class="fc" matInput formControlName="firstCtrl" [ngModel]="fc" required>
+      </mat-form-field>
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">calendar_today</mat-icon>Dom 25
+          </ng-template>
+          <mat-chip-list>
+            <mat-chip (click)="val('Dom 25 - 11:00')">11:00</mat-chip>
+            <mat-chip (click)="val('Dom 25 - 12:30')">12:30</mat-chip>
+            <mat-chip (click)="val('Dom 25 - 13:00')">13:00</mat-chip>
+            <mat-chip (click)="val('Dom 25 - 15:30')">15:30</mat-chip>
+            <mat-chip (click)="val('Dom 25 - 17:30')">17:30</mat-chip>
+            <mat-chip (click)="val('Dom 25 - 18:30')">18:30</mat-chip>
+          </mat-chip-list>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">calendar_today</mat-icon>Lunes 26
+          </ng-template>
+          <mat-chip-list>
+            <mat-chip (click)="val('Lunes 26 - 11:00')">11:00</mat-chip>
+            <mat-chip (click)="val('Lunes 26 - 12:30')">12:30</mat-chip>
+            <mat-chip (click)="val('Lunes 26 - 13:00')">13:00</mat-chip>
+            <mat-chip (click)="val('Lunes 26 - 15:30')">15:30</mat-chip>
+            <mat-chip (click)="val('Lunes 26 - 17:30')">17:30</mat-chip>
+            <mat-chip (click)="val('Lunes 26 - 18:30')">18:30</mat-chip>
+          </mat-chip-list>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">calendar_today</mat-icon>Martes 27
+          </ng-template>
+          <mat-chip-list>
+            <mat-chip (click)="val('Martes 27 - 11:00')">11:00</mat-chip>
+            <mat-chip (click)="val('Martes 27 - 12:30')">12:30</mat-chip>
+            <mat-chip (click)="val('Martes 27 - 13:00')">13:00</mat-chip>
+            <mat-chip (click)="val('Martes 27 - 15:30')">15:30</mat-chip>
+            <mat-chip (click)="val('Martes 27 - 17:30')">17:30</mat-chip>
+            <mat-chip (click)="val('Martes 27 - 18:30')">18:30</mat-chip>
+          </mat-chip-list>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">calendar_today</mat-icon>Miercoles 28
+          </ng-template>
+          <mat-chip-list>
+            <mat-chip (click)="val('Miercoles 28 - 11:00')">11:00</mat-chip>
+            <mat-chip (click)="val('Miercoles 28 - 12:30')">12:30</mat-chip>
+            <mat-chip (click)="val('Miercoles 28 - 13:00')">13:00</mat-chip>
+            <mat-chip (click)="val('Miercoles 28 - 15:30')">15:30</mat-chip>
+            <mat-chip (click)="val('Miercoles 28 - 17:30')">17:30</mat-chip>
+            <mat-chip (click)="val('Miercoles 28 - 18:30')">18:30</mat-chip>
+          </mat-chip-list>
+        </mat-tab>
+      </mat-tab-group>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <h3>Selecciones la cantidad</h3>
+      <ng-template matStepLabel>Número de boletos</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <mat-select matInput formControlName="secondCtrl">
+          <mat-option *ngFor="let c of can" [value]="c.value">
+            {{c.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <mat-form-field class="input">
+        <input class="fc" matInput formControlName="thirdCtrl" [ngModel]="puesto" required>
+      </mat-form-field>
+      <ng-template matStepLabel>Selecciona los asientos</ng-template>
+
+      <h3>Selecciona tu asiento en el teatro</h3>
+      <div class="pantalla"><mat-icon>stay_primary_landscape</mat-icon>
+        <h3>PANTALLA</h3>
+      </div>
+      <br>
+      <div class="teatro">
+        <mat-button-toggle matInput *ngFor="let puesto of asientos; let i = index" (click)="aciento(puesto)" [value]="i" [checked]="" class="puesto">
+          <mat-icon>event_seat</mat-icon> {{puesto}}
+        </mat-button-toggle>
+      </div>
+      <br>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="fourFormGroup">
+    <form [formGroup]="fourFormGroup">
+      <ng-template matStepLabel>SnackBar</ng-template>
+      <div class="caja">
+        <!-- <app-snack-bar></app-snack-bar> -->
+
+        <app-snack-row></app-snack-row>
+
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="fiveFormGroup">
+    <form [formGroup]="fiveFormGroup">
+      <ng-template matStepLabel>Resumen de la compra</ng-template>
+
+      <app-resumen-row [datos]="pass"></app-resumen-row>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="SixFormGroup">
+    <form [formGroup]="SixFormGroup">
+      <ng-template matStepLabel>Pago</ng-template>
+      <app-pago></app-pago>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <app-exinfo-row></app-exinfo-row>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>

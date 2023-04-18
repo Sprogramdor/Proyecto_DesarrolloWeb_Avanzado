@@ -1,0 +1,159 @@
+@import url("./assets/css/color-palette.css");
+@import url("./assets/css/typography.css");
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--font-comfortaa) !important;
+}
+
+mat-form-field,
+mat-vertical-stepper,
+mat-card {
+  font-family: var(--font-comfortaa) !important;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Globals */
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: min(90%, 140rem);
+  margin: 0 auto;
+  /* background-color: red; */
+}
+
+h1,
+h2,
+h3,
+h4,
+.mat-tab-label-content,
+.mat-button-wrapper {
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-staatliches);
+}
+
+mat-chip-list .mat-chip-list-wrapper {
+  margin: 0 4rem;
+}
+
+.mat-button-wrapper {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+/* CARDS */
+.example-card {
+  max-width: 42rem;
+}
+
+.shadow {
+  -webkit-box-shadow: -2px 4px 19px -4px rgba(145, 145, 145, 1);
+  -moz-box-shadow: -2px 4px 19px -4px rgba(145, 145, 145, 1);
+  box-shadow: -2px 4px 19px -4px rgba(145, 145, 145, 1);
+}
+
+.core {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid {
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (min-width: 1140px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0;
+    width: 125rem;
+    margin: 0 auto;
+  }
+}
+
+.cards {
+  width: 35rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    width: 40rem;
+  }
+}
+
+.mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mat-card-subtitle {
+  background-color: #30475e;
+  padding: 0.2rem 2rem;
+  display: inline-block;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.mat-card-img {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-actions {
+  width: 25rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}

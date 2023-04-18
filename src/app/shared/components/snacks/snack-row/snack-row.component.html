@@ -1,0 +1,29 @@
+<div class="flex">
+    <div class="shadow card-row" *ngFor="let data of snackBar; let i = index;">
+        <mat-card class="row">
+            <div>
+                <mat-card-title>{{data.nombre}}</mat-card-title>
+                <small class="desc">{{data.descripcion}}</small>
+            </div>
+            <div class="info">
+                <img class="img" src="../../../../../assets/img/snacks/{{data.image}}" alt="{{data.nombre}}">
+                <p>${{data.precio}}.00</p>
+                <mat-card-actions class="count">
+                    <button (click)="quitar(i, -1,data)" mat-mini-fab color="accent">
+                        <mat-icon>remove</mat-icon>
+                    </button>
+                    <mat-form-field class="example-form-field" style="margin: 0 1rem;">
+                        <mat-label>Cantidad</mat-label>
+                        <input readonly min="0" autocomplete="off" class="input" matInput type="text" [(ngModel)]="value[i]">
+                        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value[i]=0">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <button (click)="adquirir(i, 1,data)" mat-mini-fab color="accent">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </div>
+        </mat-card>
+    </div>
+</div>

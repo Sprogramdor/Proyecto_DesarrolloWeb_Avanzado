@@ -1,0 +1,49 @@
+#footer {
+  background-color: #263238;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  #footer {
+    padding: 2rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo {
+    padding-left: 7.5rem;
+  }
+}
+
+small {
+  color: #919191;
+  font-weight: 700;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+}
+
+.btn {
+  width: 5rem;
+  height: 5rem;
+  padding-bottom: 1rem;
+}
+
+.btn:hover {
+  background-color: #ffee00;
+}
+
+.s {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}

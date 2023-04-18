@@ -1,0 +1,34 @@
+.alert-danger {
+  text-align: center;
+  color: red;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+}
+
+.campos-field {
+  width: auto;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 50rem;
+  }
+  .campos-field {
+    width: 35rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+}

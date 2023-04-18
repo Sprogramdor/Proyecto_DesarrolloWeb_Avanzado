@@ -1,0 +1,11 @@
+mat-card{
+    align-content: center;
+}
+mat-card-title{
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 75px;
+}
+

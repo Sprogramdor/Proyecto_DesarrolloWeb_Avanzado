@@ -1,0 +1,68 @@
+<h2>Formulario: PELICULAS</h2>
+
+<form class="example-form">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Poster</mat-label>
+                    <input matInput [(ngModel)]="poster" value="{{poster}}" name="poster">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Titulo Original</mat-label>
+                    <input matInput [(ngModel)]="titulo_original" value="{{titulo_original}}" name="titulo_original">
+                </mat-form-field></td>
+        </tr>
+    </table>
+
+    <p>
+        <mat-form-field class="example-full-width">
+            <mat-label>Reparto</mat-label>
+            <textarea matInput placeholder="Reparto" [(ngModel)]="reparto" value="{{reparto}}" name="reparto"></textarea>
+        </mat-form-field>
+    </p>
+    <p>
+
+        <mat-form-field style="width: 95%;;" class="example-full-width">
+            <mat-label>Sinopsis</mat-label>
+            <textarea matInput style="height: 10rem" [(ngModel)]="sinopsis" value="{{sinopsis}}" name="sinopsis"></textarea>
+        </mat-form-field>
+    </p>
+
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Tiempo de duaracion</mat-label>
+                    <input matInput placeholder="tiempo de duracion" [(ngModel)]="tiempo_duracion" value="{{tiempo_duracion}}" name="tiempo_duracion">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Tipo</mat-label>
+                    <input matInput placeholder="" [(ngModel)]="tipo" value="{{tipo}}" name="tipo">
+                </mat-form-field></td>
+
+        </tr>
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Categoria</mat-label>
+                    <input matInput placeholder="" [(ngModel)]="categoria" value="{{categoria}}" name="categoria">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Clasificacion</mat-label>
+                    <input matInput placeholder="" [(ngModel)]="clasificacion" value="{{clasificacion}}" name="clasificacion">
+                </mat-form-field></td>
+        </tr>
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Estado</mat-label>
+                    <input matInput placeholder="" [(ngModel)]="estado" value="{{estado}}" name="estado">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Precio</mat-label>
+                    <input matInput placeholder="" [(ngModel)]="precio" value="{{precio}}" name="precio">
+                </mat-form-field></td>
+        </tr>
+    </table>
+    <div class="footer">
+        <button mat-raised-button color="primary" (click)="aceptar()"><mat-icon>save</mat-icon> Guardar</button>
+        <button mat-raised-button color="warn" (click)="cancelar()">Cancelar</button>
+    </div>
+</form>

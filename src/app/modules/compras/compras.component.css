@@ -1,0 +1,32 @@
+.compra {
+  display: block;
+}
+@media (min-width: 1140px) {
+  .compra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem 2rem;
+  }
+}
+
+mat-divider {
+  margin: 1.5rem auto;
+  width: 90%;
+}
+
+.pelicula_info {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}
+
+.precio {
+  color: red;
+  font-weight: 700;
+}

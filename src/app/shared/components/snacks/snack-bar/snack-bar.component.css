@@ -1,0 +1,14 @@
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.input {
+  text-align: center;
+}
+
+small {
+  color: #919191;
+}

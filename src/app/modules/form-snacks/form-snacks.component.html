@@ -1,0 +1,32 @@
+<h2>Formulario: Snacks</h2>
+
+<form class="example-form">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>image</mat-label>
+                    <input matInput [(ngModel)]="image" value="{{image}}" name="image">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput [(ngModel)]="nombre" value="{{nombre}}" name="nombre">
+                </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+                    <mat-label>precio</mat-label>
+                    <input matInput [(ngModel)]="precio" value="{{precio}}" name="precio">
+                </mat-form-field></td>
+        </tr>
+    </table>
+
+    <p>
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripcion</mat-label>
+            <textarea matInput placeholder="Descripcion" [(ngModel)]=" descripcion" value="{{descripcion}}" name="descripcion"></textarea>
+        </mat-form-field>
+
+    </p>
+    <div class="footer">
+        <button mat-raised-button color="primary" (click)="aceptar()"><mat-icon>save</mat-icon> Guardar</button>
+        <button mat-raised-button color="warn" (click)="cancelar()">Cancelar</button>
+    </div>
+</form>

@@ -1,0 +1,38 @@
+<div class="container">
+  <h4><mat-icon> fastfood</mat-icon> SNACKBAR</h4>
+  <hr>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Cantidad</th>
+      <th>Productos</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of carrito.xmap| keyvalue">
+      <td>{{item.value}}</td>
+      <td>{{item.key.nombre}}</td>
+      <td>${{item.key.precio}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2">Total de su compra</th>
+      <th>${{total}}.00</th>
+    </tr>
+  </tfoot>
+</table>
+
+<div>
+  <app-cardspay></app-cardspay>
+</div>
+
+<hr class="container">
+
+<h3 colspan="2">¿Desea realizar la compra?</h3>
+<div class="acciones">
+  <button mat-raised-button (click)="onSubmit()" id="aceptar">Aceptar</button>
+  <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>
+</div>
